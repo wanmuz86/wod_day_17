@@ -1,0 +1,52 @@
+//
+// main.c
+// checkPrime
+//
+// Created by Murat Durgut on 15.10.18.
+// Copyright © 2018 FHV IT. All rights reserved.
+//
+
+
+#include <stdio.h>
+#include <math.h>
+
+
+void checkPrime(int n)
+{
+    int t = 0;
+    int i = 1;
+    int s;
+
+    for(i=1;i<=n;i++)
+    {
+        t=0;
+    
+        for(j=1;j<=i;j++)
+        {
+        
+            if( n % i == 0)
+                t++;
+         }
+         if (t==2) {
+          s=s+n;
+          }
+             
+     }
+     
+     printf("sum of Prime numbers till n is = %d", n);
+
+     
+}
+
+int main()
+{
+    printf("checkPrime\n");
+    int n;
+    printf("Enter number till which sum of prime is to be calculated: ");
+    scanf("%d", &n);
+    checkPrime(n);
+
+    
+    printf("\n");
+    return 0;
+}
